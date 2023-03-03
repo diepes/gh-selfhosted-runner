@@ -40,14 +40,16 @@ build: ## Build the container.
 
 
 run: ## Run container build by build command
-	docker run -it -e GH_OWNER=$(GH_OWNER) \
+	docker run -it \
+	        -e GH_OWNER=$(GH_OWNER) \
 			-e GH_REPOSITORY=$(GH_REPOSITORY) \
 			-e GH_OWNER=$(GH_OWNER) \
 			-e GH_TOKEN=$(GH_TOKEN) \
 			$(DOCKER_REPO)/$(APP_NAME)
 
 run-debug: ## Run container build by build command
-	docker run -it -e GH_OWNER=$(GH_OWNER) \
+	docker run -it \
+	        -e GH_OWNER=$(GH_OWNER) \
 			-e GH_REPOSITORY=$(GH_REPOSITORY) \
 			-e GH_OWNER=$(GH_OWNER) \
 			-e GH_TOKEN=$(GH_TOKEN) \
