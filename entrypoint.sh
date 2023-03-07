@@ -14,6 +14,7 @@ else
     RUNNER_NAME=${GH_RUNNER_NAME}
 fi
 
+## https://docs.github.com/en/rest/actions/self-hosted-runners?apiVersion=2022-11-28#create-a-registration-token-for-an-organization
 # REG_CURL=$(curl -sX POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${GH_TOKEN}" https://api.github.com/repos/${GH_OWNER}/${GH_REPOSITORY}/actions/runners/registration-token )
 # echo "Debug REG_CURL=$REG_CURL"
 # REG_TOKEN=echo "$REG_CURL" | jq .token --raw-output)

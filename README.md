@@ -1,10 +1,8 @@
 # Container image of GitHub runner
 
- * Github src - https://github.com/actions/runner/releases
+* Github src - https://github.com/actions/runner/releases
 
 This builds a container that contains the Github runner that can be deployed in a k8s(kubernetes) cluster and then targeted by Github actions to runs task on selfhosted runner (this container)
-
-
 
 ## config.env - vars
 
@@ -24,7 +22,13 @@ This builds a container that contains the Github runner that can be deployed in 
     * e.g. [Azure](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli) $ az acr login --name myregistry
     * $ docker push ${DOCKER_REPO}/${DOCKER_NAME}
 
+## Local test
+ 1. Generate Github -> Actions -> SelfHosted Runner -> New Runner -> get token
+ 2. ./go-run_local.sh
+    1. Might have to authenticate to docker container registry
+       * e.g. Azure acr $ az acr login -n <acrName>
 
-    ## k8s deployment
+## k8s deployment
 
 * ToDo ...
+* GH_TOKEN
